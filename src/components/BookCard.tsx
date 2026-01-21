@@ -1,8 +1,6 @@
-// src/components/BookCard.tsx
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 
-// Props interface
 interface BookCardProps {
     title: string;
     cover: string;
@@ -10,7 +8,6 @@ interface BookCardProps {
     rating?: number;
 }
 
-// Minimal status badge component
 const StatusBadge = ({ status }: { status: "WANT" | "READING" | "DONE" }) => {
     let bgColor;
     switch (status) {
@@ -31,7 +28,6 @@ const StatusBadge = ({ status }: { status: "WANT" | "READING" | "DONE" }) => {
     );
 };
 
-// BookCard component
 export default function BookCard({
     title,
     cover,
@@ -61,7 +57,7 @@ const styles = StyleSheet.create({
         width: 120,
         height: 180,
         borderRadius: 6,
-        backgroundColor: "#eee", // placeholder while loading
+        backgroundColor: "#eee",
     },
     title: {
         marginTop: 4,
